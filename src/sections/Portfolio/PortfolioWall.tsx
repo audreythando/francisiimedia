@@ -167,4 +167,4 @@ const PortfolioWall = () => {
     );
 };
 
-export default PortfolioWall;
+export default PortfolioWall; 
