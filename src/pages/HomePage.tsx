@@ -17,7 +17,7 @@ const HomePage = () => {
       <TestimonialsSection />
       <PackagesSection />
       <BookingSection />
-
+ 
     </>
   );
 };
