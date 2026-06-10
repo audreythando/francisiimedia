@@ -5,6 +5,7 @@ import StorySelection from "../sections/Stories/StorySelection";
 import PortfolioWall from "../sections/Portfolio/PortfolioWall";
 import TestimonialsSection from "../sections/Testinmonials/TestimonialsSection";
 import PackagesSection from "../sections/Packages/PackagesSection";
+import BookingSection from "../sections/Bookings/BookingSection";
 
 
 
@@ -12,11 +13,12 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-  <HeroSection />
+      <HeroSection />
       <StorySelection />
-        <PortfolioWall />
-         <TestimonialsSection />
-         <PackagesSection />
+      <PortfolioWall />
+      <TestimonialsSection />
+      <PackagesSection />
+      <BookingSection />
       <Box
         sx={{
           minHeight: "100vh",
