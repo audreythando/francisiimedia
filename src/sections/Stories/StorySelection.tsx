@@ -46,7 +46,8 @@ const StorySelection = () => {
     <Box
       id="stories"
       sx={{
-        py: { xs: 8, md: 14 },
+        pt: { xs: 18, md: 14 },
+pb: { xs: 8, md: 14 },
         background:
           "linear-gradient(180deg, #050505 0%, #0b0b0b 50%, #050505 100%)",
       }}
@@ -97,7 +98,7 @@ const StorySelection = () => {
             >
               <Box
                 sx={{
-                  minHeight: { xs: 260, md: 360 },
+                 minHeight: { xs: 280, md: 420 },
                   p: { xs: 3, md: 4 },
                   borderRadius: "34px",
                   position: "relative",

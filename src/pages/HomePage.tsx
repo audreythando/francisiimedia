@@ -2,6 +2,10 @@ import { Box } from "@mui/material";
 import Navbar from "../components/layout/Navbar";
 import HeroSection from "../sections/Hero/HeroSection";
 import StorySelection from "../sections/Stories/StorySelection";
+import PortfolioWall from "../sections/Portfolio/PortfolioWall";
+import TestimonialsSection from "../sections/Testinmonials/TestimonialsSection";
+
+
 
 const HomePage = () => {
   return (
@@ -9,6 +13,8 @@ const HomePage = () => {
       <Navbar />
   <HeroSection />
       <StorySelection />
+        <PortfolioWall />
+         <TestimonialsSection />
       <Box
         sx={{
           minHeight: "100vh",
