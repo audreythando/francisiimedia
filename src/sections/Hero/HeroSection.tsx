@@ -26,7 +26,13 @@ const HeroSection = () => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ flex: 0.95, width: "100%" }}>
+          <Box
+            sx={{
+              flex: 0.95,
+              width: "100%",
+              textAlign: { xs: "center", md: "left" },
+            }}
+          >
             <motion.div
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
@@ -36,15 +42,21 @@ const HeroSection = () => {
                 sx={{
                   color: "primary.main",
                   textTransform: "uppercase",
-                  letterSpacing: { xs: "0.22em", md: "0.35em" },
-                  fontSize: { xs: "0.72rem", md: "0.85rem" },
+                  letterSpacing: { xs: "0.18em", md: "0.35em" },
+                  fontSize: { xs: "0.66rem", md: "0.85rem" },
                   mb: 2,
                 }}
               >
                 Capturing Memories Across Zimbabwe
               </Typography>
 
-              <Typography variant="h1" sx={{ maxWidth: 650, mb: 3 }}>
+              <Typography
+                variant="h1"
+                sx={{
+                  maxWidth: { xs: "100%", md: 650 },
+                  mb: 3,
+                }}
+              >
                 We Capture
                 <br />
                 Your Story.
@@ -52,13 +64,24 @@ const HeroSection = () => {
 
               <Typography
                 variant="body1"
-                sx={{ maxWidth: 620, color: "text.secondary", mb: 5 }}
+                sx={{
+                  maxWidth: 620,
+                  mx: { xs: "auto", md: 0 },
+                  color: "text.secondary",
+                  mb: 5,
+                }}
               >
                 Preserving Zimbabwe&apos;s most meaningful moments through
                 timeless photography and cinematic storytelling.
               </Typography>
 
-              <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+              <Stack
+                direction={{ xs: "column", sm: "row" }}
+                spacing={2}
+                sx={{
+                  justifyContent: { xs: "center", md: "flex-start" },
+                }}
+              >
                 <Button variant="contained" size="large">
                   Reserve Your Date
                 </Button>
@@ -70,7 +93,13 @@ const HeroSection = () => {
             </motion.div>
           </Box>
 
-          <Box sx={{ flex: 1.05, width: "100%" }}>
+          <Box
+            sx={{
+              flex: 1.05,
+              width: "100%",
+              display: { xs: "none", sm: "block" },
+            }}
+          >
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -97,10 +126,10 @@ const HeroSection = () => {
                   alt="Francisii Media photography"
                   sx={{
                     width: "100%",
-                    height: { xs: 420, sm: 520, md: 680 },
+                    height: { sm: 520, md: 680 },
                     objectFit: "cover",
                     borderRadius: {
-                      xs: "32px",
+                      sm: "32px",
                       md: "48px 48px 180px 48px",
                     },
                     border: "1px solid rgba(214,181,109,0.26)",
@@ -111,9 +140,9 @@ const HeroSection = () => {
                 <Box
                   sx={{
                     position: "absolute",
-                    left: { xs: 16, md: -36 },
-                    bottom: { xs: 20, md: 50 },
-                    p: { xs: 2, md: 3 },
+                    left: { sm: 16, md: -36 },
+                    bottom: { sm: 20, md: 50 },
+                    p: { sm: 2, md: 3 },
                     borderRadius: "24px",
                     background: "rgba(16,16,16,0.82)",
                     backdropFilter: "blur(18px)",
@@ -138,9 +167,9 @@ const HeroSection = () => {
                 <Box
                   sx={{
                     position: "absolute",
-                    right: { xs: 16, md: -28 },
-                    top: { xs: 20, md: 48 },
-                    p: { xs: 2, md: 2.5 },
+                    right: { sm: 16, md: -28 },
+                    top: { sm: 20, md: 48 },
+                    p: { sm: 2, md: 2.5 },
                     borderRadius: "999px",
                     background: "rgba(214,181,109,0.92)",
                     color: "#050505",
