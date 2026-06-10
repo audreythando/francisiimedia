@@ -4,6 +4,7 @@ import HeroSection from "../sections/Hero/HeroSection";
 import StorySelection from "../sections/Stories/StorySelection";
 import PortfolioWall from "../sections/Portfolio/PortfolioWall";
 import TestimonialsSection from "../sections/Testinmonials/TestimonialsSection";
+import PackagesSection from "../sections/Packages/PackagesSection";
 
 
 
@@ -15,6 +16,7 @@ const HomePage = () => {
       <StorySelection />
         <PortfolioWall />
          <TestimonialsSection />
+         <PackagesSection />
       <Box
         sx={{
           minHeight: "100vh",
