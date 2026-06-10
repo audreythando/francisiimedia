@@ -12,10 +12,34 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-const navItems = ["Stories", "Packages", "Reviews", "Booking"];
+const navItems = [
+  { label: "Stories", id: "stories" },
+  { label: "Portfolio", id: "portfolio" },
+  { label: "Reviews", id: "reviews" },
+  { label: "Packages", id: "packages" },
+  { label: "Booking", id: "booking" },
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    setOpen(false);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setOpen(false);
+  };
 
   return (
     <>
@@ -43,7 +67,7 @@ const Navbar = () => {
             justifyContent: "space-between",
           }}
         >
-          <Box>
+          <Box onClick={scrollToTop} sx={{ cursor: "pointer" }}>
             <Typography
               sx={{
                 color: "primary.main",
@@ -77,8 +101,9 @@ const Navbar = () => {
           >
             {navItems.map((item) => (
               <Button
-                key={item}
+                key={item.id}
                 color="inherit"
+                onClick={() => scrollToSection(item.id)}
                 sx={{
                   color: "text.primary",
                   fontSize: "0.85rem",
@@ -89,11 +114,15 @@ const Navbar = () => {
                   },
                 }}
               >
-                {item}
+                {item.label}
               </Button>
             ))}
 
-            <Button variant="contained" sx={{ ml: 1 }}>
+            <Button
+              variant="contained"
+              sx={{ ml: 1 }}
+              onClick={() => scrollToSection("booking")}
+            >
               Book Now
             </Button>
           </Stack>
@@ -133,7 +162,7 @@ const Navbar = () => {
             alignItems: "center",
           }}
         >
-          <Box>
+          <Box onClick={scrollToTop} sx={{ cursor: "pointer" }}>
             <Typography sx={{ color: "primary.main", fontWeight: 900 }}>
               FRANCISII
             </Typography>
@@ -148,7 +177,10 @@ const Navbar = () => {
             </Typography>
           </Box>
 
-          <IconButton onClick={() => setOpen(false)} sx={{ color: "primary.main" }}>
+          <IconButton
+            onClick={() => setOpen(false)}
+            sx={{ color: "primary.main" }}
+          >
             <CloseIcon />
           </IconButton>
         </Box>
@@ -156,19 +188,23 @@ const Navbar = () => {
         <Stack spacing={2.5} sx={{ mt: 6 }}>
           {navItems.map((item) => (
             <Button
-              key={item}
-              onClick={() => setOpen(false)}
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
               sx={{
                 justifyContent: "flex-start",
                 color: "text.primary",
                 fontSize: "1.1rem",
               }}
             >
-              {item}
+              {item.label}
             </Button>
           ))}
 
-          <Button variant="contained" size="large" onClick={() => setOpen(false)}>
+          <Button
+            variant="contained"
+            size="large"
+            onClick={() => scrollToSection("booking")}
+          >
             Book Now
           </Button>
         </Stack>
